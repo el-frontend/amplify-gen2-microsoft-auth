@@ -9,7 +9,7 @@ export const auth = defineAuth({
     email: true,
     externalProviders: {
       saml: {
-        name: "Microsoft Entra",
+        name: "MicrosoftEntra",
         metadata: {
           metadataContent: "./metadata.xml", // or content of the metadata file
           metadataType: "FILE", // or 'FILE'
@@ -22,7 +22,7 @@ export const auth = defineAuth({
           fullname: "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname",
         },
       },
-      logoutUrls: ["http://localhost:5173"],
+      logoutUrls: ["http://localhost:5173/"],
       callbackUrls: [
         "http://localhost:5173"
       ],
