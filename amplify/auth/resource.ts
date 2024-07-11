@@ -27,9 +27,9 @@ export const auth = defineAuth({
           fullname: "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/displayname",
         },
       },
-      logoutUrls: ["http://localhost:5173/"],
+      logoutUrls: ["http://localhost:3000"],
       callbackUrls: [
-        "http://localhost:5173"
+        "http://localhost:3000"
       ],
     },
   },
