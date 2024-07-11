@@ -1,5 +1,10 @@
 import { defineAuth } from "@aws-amplify/backend";
+import { readFileSync } from "fs";
 
+/**
+ * Define and configure your auth resource
+ * @see https://docs.amplify.aws/gen2/build-a-backend/auth
+ */
 /**
  * Define and configure your auth resource
  * @see https://docs.amplify.aws/gen2/build-a-backend/auth
@@ -11,8 +16,8 @@ export const auth = defineAuth({
       saml: {
         name: "MicrosoftEntra",
         metadata: {
-          metadataContent: "./metadata.xml", // or content of the metadata file
-          metadataType: "FILE", // or 'FILE'
+          metadataContent: readFileSync("./metadata.xml", "utf-8"),
+          metadataType: "FILE",
         },
         attributeMapping: {
           email:
